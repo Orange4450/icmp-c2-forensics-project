@@ -1,8 +1,10 @@
 ## ICMP C2 Forensics Project
 
 **Course:** Digital Forensics of Network Infrastructure
+
 **Topic:** Detection of Hidden Command-and-Control (C2) Channels Based on ICMP Tunneling
-**Student:** Boltabay Zhaniya Kanyshkyzy, group SIS-231
+
+**Student:** Boltabay Zhaniya Kanyshkyzy, group SIS-2313
 
 ## Scenario
 A workstation in a training network ("victim", 192.168.100.10) is suspected of being
