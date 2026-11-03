@@ -9,3 +9,8 @@ installed). Both VMs installed and verified working.
 ## 2026-11-04
 Network configured: labnet internal network + NAT adapter on both VMs
 (victim and attacker-c2); promiscuous mode (Allow All) enabled on both.
+
+## 2026-11-04
+Static IPs configured via netplan: 
+victim = 192.168.100.10/24,
+attacker-c2 = 192.168.100.20/24 (both on enp0s3/labnet interface).
