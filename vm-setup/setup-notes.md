@@ -30,3 +30,7 @@ also acquire a DHCP lease (none available on labnet), causing connection
 activation timeout/failure. Fix: added "dhcp4: no" explicitly to
 50-cloud-init.yaml on victim. Connection now activates successfully
 (nmcli: enp0s3 connected via netplan-enp0s3).
+
+## 2026-11-05
+Network connectivity confirmed working: ping between victim (192.168.100.10)
+and attacker-c2 (192.168.100.20) successful, 0% packet loss.
