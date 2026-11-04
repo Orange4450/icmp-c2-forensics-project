@@ -22,3 +22,11 @@ identical VirtualBox Internal Network config ('labnet') via VBoxManage on
 both VMs - config correct. On attacker-c2, networkctl shows interface fully
 online and configured. On victim, NetworkManager shows "Activation of
 network connection failed" notification at boot. Diagnosing further.
+
+## 2026-11-05
+Root cause found: 00-installer-config.yaml set dhcp4: true on enp0s3,
+conflicting with static IP in 50-cloud-init.yaml - NetworkManager tried to
+also acquire a DHCP lease (none available on labnet), causing connection
+activation timeout/failure. Fix: added "dhcp4: no" explicitly to
+50-cloud-init.yaml on victim. Connection now activates successfully
+(nmcli: enp0s3 connected via netplan-enp0s3).
