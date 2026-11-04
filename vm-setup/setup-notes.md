@@ -14,3 +14,11 @@ Network configured: labnet internal network + NAT adapter on both VMs
 Static IPs configured via netplan: 
 victim = 192.168.100.10/24,
 attacker-c2 = 192.168.100.20/24 (both on enp0s3/labnet interface).
+
+## 2026-11-05
+Troubleshooting: ping between victim and attacker-c2 failed after static IP
+setup (100% packet loss, tcpdump showed no packets arriving). Verified
+identical VirtualBox Internal Network config ('labnet') via VBoxManage on
+both VMs - config correct. On attacker-c2, networkctl shows interface fully
+online and configured. On victim, NetworkManager shows "Activation of
+network connection failed" notification at boot. Diagnosing further.
