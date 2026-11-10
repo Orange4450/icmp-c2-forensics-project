@@ -39,3 +39,8 @@ and attacker-c2 (192.168.100.20) successful, 0% packet loss.
 Installed required forensic tools: Wireshark, git, build-essential, autoconf
 on victim; git, build-essential, autoconf on attacker-c2 (no GUI, Wireshark
 not needed there). Both installations completed without errors.
+
+## 2026-11-11
+Built ptunnel-ng from source (github.com/utoni/ptunnel-ng) on both victim
+and attacker-c2 via git clone + autogen.sh + make. Build succeeded on both
+VMs without errors; executable src/ptunnel-ng created on each.
