@@ -34,3 +34,8 @@ activation timeout/failure. Fix: added "dhcp4: no" explicitly to
 ## 2026-11-05
 Network connectivity confirmed working: ping between victim (192.168.100.10)
 and attacker-c2 (192.168.100.20) successful, 0% packet loss.
+
+## 2026-11-11
+Installed required forensic tools: Wireshark, git, build-essential, autoconf
+on victim; git, build-essential, autoconf on attacker-c2 (no GUI, Wireshark
+not needed there). Both installations completed without errors.
