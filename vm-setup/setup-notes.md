@@ -44,3 +44,13 @@ not needed there). Both installations completed without errors.
 Built ptunnel-ng from source (github.com/utoni/ptunnel-ng) on both victim
 and attacker-c2 via git clone + autogen.sh + make. Build succeeded on both
 VMs without errors; executable src/ptunnel-ng created on each.
+
+## 2026-11-11
+Final tunnel verification: started ptunnel-ng server on attacker-c2
+(./src/ptunnel-ng -r0.0.0.0 -R22) and client on victim
+(./src/ptunnel-ng -p 192.168.100.20 -l 2222 -r192.168.100.20 -R22).
+Verified end-to-end by SSH'ing from victim to attacker-c2 through the
+tunnel (ssh -p 2222 attacker-c2@127.0.0.1) - connection succeeded,
+confirming the ICMP C2 tunnel is fully functional. Environment setup
+(Stage 0) is complete. Tunnel left running for use in Lab 1/Lab 2 traffic
+capture.
