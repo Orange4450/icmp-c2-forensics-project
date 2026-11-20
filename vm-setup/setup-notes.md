@@ -59,3 +59,12 @@ capture.
 Added a VirtualBox Shared Folder on victim ("evidence", auto-mount) pointing
 to the host's lab1/evidence/ directory, to transfer the Lab 1 evidence file
 without needing git/token authentication inside the VM.
+
+## 2026-11-21
+Installing Guest Additions (needed for the Shared Folder to work) caused
+victim's display manager to fail on boot (login screen showed no user,
+unresponsive). Recovered via GRUB recovery mode (root shell) after several
+reboot attempts; no files were lost. Guest Additions remain uninstalled.
+Abandoned the Shared Folder approach for evidence file transfer; switching
+to GitHub Personal Access Token method instead (typing the token into a
+visible file first to avoid blind password-field input errors).
