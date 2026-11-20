@@ -19,5 +19,5 @@ TCP on non-standard ports but allows ICMP.
 - Tools: Wireshark, ptunnel-ng, OpenSSH client, sha256sum
 
 ## Structure
-- `lab1/` ... `lab7/` — evidence, reports and screenshots per lab stage
+- `stage1/` ... `stage7/` — evidence, reports and screenshots per project stage
 - `vm-setup/` — network configs and environment setup notes
