@@ -50,3 +50,12 @@ a3c7a8fed09b3db88984655271fa61782e22ca7cf2ad1c025e085c1c26bdeac6
 
 Evidence file still needs to be transferred from victim to the
 repository (stage1/evidence/).
+
+## 2026-11-22
+
+Transferred LAB1_Network_Evidence.pcapng from victim's Desktop into the
+repository using the GitHub Personal Access Token method (token written to
+a visible ~/token.txt file to avoid blind password-field input errors).
+Cloned the repository on victim, created stage1/evidence/, copied the
+evidence file there, and verified its SHA-256 hash matched the previously
+recorded value (a3c7a8fed09b3db88984655271fa61782e22ca7cf2ad1c025e085c1c26bdeac6).
