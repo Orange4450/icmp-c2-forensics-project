@@ -1,11 +1,11 @@
-# Lab 1 — Fundamentals of Network Digital Forensics and Collection of Network Evidence
+# Stage 1 — Fundamentals of Network Digital Forensics and Collection of Network Evidence
 
-Running log of the Lab 1 process: steps taken, commands used, and any
+Running log of the Stage 1 process: steps taken, commands used, and any
 troubleshooting encountered during evidence collection.
 
 ## 2026-11-11
 
-Started Wireshark capture setup on victim for Lab 1 evidence collection.
+Started Wireshark capture setup on victim for Stage 1 evidence collection.
 Attempted to start packet capture on interface enp0s3; got "You don't have
 permission to capture on local interfaces" despite selecting "Yes" during
 Wireshark install. Fixed by running `sudo usermod -aG wireshark $USER` and
@@ -49,4 +49,4 @@ on victim's Desktop. Calculated its SHA-256 hash:
 a3c7a8fed09b3db88984655271fa61782e22ca7cf2ad1c025e085c1c26bdeac6
 
 Evidence file still needs to be transferred from victim to the
-repository (lab1/evidence/).
+repository (stage1/evidence/).

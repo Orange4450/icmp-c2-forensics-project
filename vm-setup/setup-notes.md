@@ -52,12 +52,12 @@ Final tunnel verification: started ptunnel-ng server on attacker-c2
 Verified end-to-end by SSH'ing from victim to attacker-c2 through the
 tunnel (ssh -p 2222 attacker-c2@127.0.0.1) - connection succeeded,
 confirming the ICMP C2 tunnel is fully functional. Environment setup
-(Stage 0) is complete. Tunnel left running for use in Lab 1/Lab 2 traffic
+(Stage 0) is complete. Tunnel left running for use in Stage 1/Stage 2 traffic
 capture.
 
 ## 2026-11-20
 Added a VirtualBox Shared Folder on victim ("evidence", auto-mount) pointing
-to the host's lab1/evidence/ directory, to transfer the Lab 1 evidence file
+to the host's stage1/evidence/ directory, to transfer the Stage 1 evidence file
 without needing git/token authentication inside the VM.
 
 ## 2026-11-21
