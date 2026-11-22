@@ -1,6 +1,7 @@
 # Final Forensic Report — Detection of Hidden Command-and-Control (C2) Channels Based on ICMP Tunneling
 
 **Student:** Boltabay Zhaniya Kanyshkyzy, group SIS-2313
+
 **Course:** Digital Forensics of Network Infrastructure
 
 ## 2. Objective
